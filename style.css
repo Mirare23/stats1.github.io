@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+:root {
+--Very-dark-blue-mainbackground: hsl(233, 47%, 7%);
+--desaturated-blue-cardbackground: hsl(244, 38%, 16%);
+--Soft-violet-accent: hsl(277, 64%, 61%);
+--White: hsl(0, 0%, 100%);
+--Slightly-transparent-whitemainparagraph: hsla(0, 0%, 100%, 0.75);
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+--fontfamily-inter: 'Inter', sans-serif;
+--fontfamily-lexend:'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-dark-blue-mainbackground);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontfamily-inter);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--desaturated-blue-cardbackground);
+    border-radius: 15px;
+    max-width: 62.5rem;
+    margin: 2rem;
+}
+
+.desc {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    max-width: calc(62.5rem/2);
+}
+
+.title {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.insight {
+    color: var(--Soft-violet-accent);
+}
+
+.desc  > p {
+    color: var(--Slightly-transparent-white);
+    margin-bottom: 5rem;
+    font-size: 15px;
+}
+
+.graph {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.graph p {
+    font-family: var(--fontfamily-lexend);
+    letter-spacing: .0875rem;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--Slightly-transparent-white);
+
+}
+
+.graph h2 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+.hero-image {
+    display: block;
+    background-color: var(--Soft-violet-accent);
+    border-radius: 0px 15px 15px 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px 15px 15px 0;
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+}
+
+@media (max-width: 38.75rem) {
+    .card {
+        flex-direction: column-reverse;
+        margin: 15px;
+    }
+    .desc {
+        padding: 1rem;
+    }
+
+    .hero-image {
+        border-radius: 15px 15px 0 0;
+    }
+
+    img {
+        display: block;
+        border-radius: 15px 15px 0 0;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .desc {
+        text-align: center;
+    }
+
+    .desc > p {
+        margin-bottom: 2rem;
+    }
+
+    .graph {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .graph p {
+        font-size: 8px;
+    }
+}
+
